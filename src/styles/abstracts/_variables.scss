@@ -1,0 +1,123 @@
+// Changing the fonts
+// $font-family-base: 'Open Sans', sans-serif;
+$font-family-gothic-a1 :'Gothic A1', sans-serif;
+
+$font-family-base: #{inspect($font-family-gothic-a1)} !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-semi-bold:       600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-extra-bold:      800 !default;
+
+$font-weights: (
+    "light": $font-weight-light,
+    "normal": $font-weight-normal,
+    "semi-bold": $font-weight-semi-bold,
+    "bold": $font-weight-bold,
+    "extra-bold": $font-weight-extra-bold
+);
+
+$variables: (
+    --principalColor: var(--principalColor),
+	--secondaryColor: var(--secondaryColor),
+	--buttonsColor: var(--buttonsColor),
+	--hoverColor: var(--hoverColor),
+	--backgroundColor: var(--backgroundColor)
+  );
+
+$principal-color: #3B3B3B;
+$secondary-color: #F8CB1C;
+$buttons-color:#7070B1;
+$background-color: #EBEBEB;
+
+$font-icon-source: '../assets/fonts/squint';
+$font-source: '../assets/fonts/gothic-a1';
+$font-icon-base: 'squint';
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 375px,
+//   md: 768px,
+//   lg: 1024px,
+//   xl: 1200px
+// ) !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+// $grid: (
+//     "cnr": (
+//         "xs": $font-size-base * 0.625,
+//         "sm": $font-size-base * 1.875,
+//         "md": $font-size-base * 1.0625,
+//         "lg": $font-size-base * 2.625,
+//         "xl": $font-size-base * 0.9375
+//     ),
+//     "col": (
+//         "xs": $font-size-base * 0.3125,
+//         "sm": $font-size-base * 0.25,
+//         "md": $font-size-base * 0.375,
+//         "lg": $font-size-base * 0.5,
+//         "xl": $font-size-base * 0.625
+//     )
+// ) !default;
+// APP COLORS
+
+// RED
+$red: #D20148;
+$red1: #D26B89;
+$red2: #EE80A2;
+// BACKGROUND
+$red-bg: #9E0136;
+
+// WHITE
+$white: #fff;
+$white1: #f0f0f0;
+$white2: #CCC;
+$white3: #cfcfcf;
+$white4: #eeeeee;
+$white5: #e7e7e7;
+// BACKGROUND
+$bg-color: #F8F8F8;
+
+// GRAY
+$gray: #f8f9fa;
+$gray1: #d6d6d6;
+$gray2: #CCCCCC;
+$gray3: #909090;
+$gray4: #A4A4A4;
+$gray5: #9B9B9B;
+$gray6: #EBEBEB;
+$gray7: #DBDBDB;
+
+// GREY - TEXT
+$txt-gray: #444444;
+
+// BLACK
+$black: #000;
+$black1: #4D4D4D; // Text
+$black2: #424242;
+$black3: #292929;
+$black4: #3B3B3B;
+
+// BLUE
+$blue: #3b5998;
+
+// Font Size
+$fs-small: 12px;
+$fs-medium: 14px;
+$fs-default: 16px;
+$fs-large: 18px;
+$fs-extra-large: 24px;
+
+// $CONSTANTS: (
+//     TYPE_MAP: 'map'
+// ) !global;
+
+// - Global
+$spacing-container: (
+    xs: $font-size-base * 0.5625,
+    sm: $font-size-base * 0.9375,
+    lg: $font-size-base * 1.25,
+    xl: $font-size-base * 1.5625
+);

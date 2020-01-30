@@ -1,0 +1,39 @@
+@mixin transition($time, $type, $property) {
+    transition: $time $type $property;
+    -moz-transition: $time $type $property;
+    -webkit-transition: $time $type $property;
+}
+
+// Create mixin for font-weight and font-size properties
+@mixin custom-font($fontsize, $fontweight) {
+    font-weight: $fontweight;
+    font-size: $fontsize;
+}
+
+@mixin make-spacing($padding: null,
+    $margin: null) {
+    // - Defaults
+    $defaults: (top: null,
+            right: null,
+            bottom: null,
+            left: null);
+
+    $padding: avoid-type($padding, const(TYPE_MAP), $defaults);
+    $margin: avoid-type($margin, const(TYPE_MAP), $defaults);
+    $padding: map-merge($defaults, $padding);
+    $margin: map-merge($defaults, $margin);
+
+    @each $padding-item,
+    $value in $padding {
+        @if ($value !=null) {
+            padding-#{$padding-item}: $value;
+        }
+    }
+
+    @each $margin-item,
+    $value in $margin {
+        @if ($value !=null) {
+            margin-#{$margin-item}: $value;
+        }
+    }
+}

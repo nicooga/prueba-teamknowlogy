@@ -1,0 +1,13 @@
+{
+	"pages": {
+		"language-picker": {
+			"language": "Language"
+		}
+	},
+	"enums": {
+		"languages": {
+			"en": "English",
+			"es": "Spanish"
+		}
+	}
+}

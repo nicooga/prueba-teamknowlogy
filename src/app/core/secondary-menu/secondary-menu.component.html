@@ -1,0 +1,18 @@
+<nav class="navbar" id="nav-secondary">
+  <div class="container container-sm container-md container-lg container-xl">
+    <div class="sections-distributed">
+      <!--Navbar navigation-->
+      <ul class="navbar-nav mr-auto" id="navbar-navigation" *ngIf="!customeTabs">
+      </ul>
+      <ul class="navbar-nav mr-auto" id="navbar-navigation" *ngIf="customeTabs">
+        <ng-content></ng-content>
+      </ul>
+      <!--Navbar tools-->
+      <div class="navbar-expand-sm ml-auto" *ngIf="showOptions">
+        <ul class="navbar-nav " id="navbar-tools">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</nav>

@@ -1,0 +1,47 @@
+.sq-form {
+	.input-group {
+	  border-bottom: 2px solid $white2;
+	  transition: border-bottom 0.5s;
+  
+	  &.active {
+		border-bottom: 2px solid $red1;
+	  }
+  
+	  input {
+		font-size: 0.85rem;
+		padding-bottom: 0;
+		font-weight: lighter;
+  
+		&::placeholder {
+		  color: $grey1 !important;
+		}
+  
+		&[type="password"] {
+		  font-size: 17px;
+  
+		  &::placeholder {
+			font-size: 0.85rem;
+		  }
+		}
+	  }
+  
+	  .form-control {
+		border: none;
+		border-radius: 0;
+	  }
+  
+	  .input-group-text {
+		padding-bottom: 0;
+		padding-right: 0;
+		padding-left: 0;
+		background: none;
+		border: none;
+		border-radius: 0;
+  
+		img {
+		  width: 15px;
+		}
+	  }
+	}
+  }
+  

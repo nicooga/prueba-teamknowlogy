@@ -1,0 +1,106 @@
+<div class="table-chart {{ classname }}">
+    <div class="container-wrapper-inline">
+        <div class="table-wrapper">
+            <div class="table-header">
+                <h5 class="text-5 text-md-6 text-lg-6 text-xl-4">{{ title }}</h5>
+            </div>
+            <ng-container *ngIf="rows && rows.length > 0">
+                <div class="data-wrapper">
+
+                    <div class="datum" *ngFor="let row of rows | paginate: defaultPaginationConfig;let index = index"
+                        (click)="selectRow(row)" [class.active]=" _selectedRow.id === row.id && activeRow">
+                        <div class="d-wrapper">
+                            <div class="d-position"><span class="d-block">
+                                    {{ row.position | number: '2.' }}
+                                </span></div>
+                            <div class="d-subject-wrapper">
+                                <div class="d-subject"><span class="d-block text-truncate">{{ row.name }}</span>
+                                    <div class="d-kpi">
+                                        <ng-container [ngSwitch]="row.growth">
+                                            <ng-container *ngSwitchCase="'up'"><span
+                                                    class="d-block icon-up text-success"></span></ng-container>
+                                            <ng-container *ngSwitchCase="'down'"><span
+                                                    class="d-block icon-down text-danger"></span></ng-container>
+                                                <ng-container *ngSwitchCase="'equals'"><span
+                                                        class="d-block icon-burguer text-primary"></span></ng-container>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                                <div class="d-value">
+                                    <span class="d-block">
+                                        <ng-container *ngIf="currencyStart">
+                                            <span class="currency-end">
+                                                {{ currencyStart }}
+                                            </span>
+                                        </ng-container>
+                                        {{ row.value | number: '2.' }}
+                                        <ng-container *ngIf="currencyEnd">
+                                            <span class="currency-end">
+                                                {{ currencyEnd }}
+                                            </span>
+                                        </ng-container>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="!rows || rows.length === 0">
+                <div class="data-wrapper">
+
+                    <div class="datum" *ngFor="let i of [0,1,2,3,4]">
+                        <div class="d-wrapper">
+                            <div class="d-position"><span class="d-block">
+                                    
+                                </span></div>
+                            <div class="d-subject-wrapper">
+                                <div class="d-subject"><span class="d-block text-truncate">---</span>
+                                </div>
+                                <div class="d-value">
+                                    <span class="d-block">
+                                        <ng-container *ngIf="currencyStart">
+                                            <span class="currency-end">
+                                               ---
+                                            </span>
+                                        </ng-container>
+                                        ---
+                                        <ng-container *ngIf="currencyEnd">
+                                            <span class="currency-end">
+                                                ---
+                                            </span>
+                                        </ng-container>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+
+        </div>
+    </div>
+</div>
+<ng-container *ngIf="rows && rows.length > 0">
+        <sq-pagination-shared [config]="defaultPaginationConfig" [type]="2" [pluralText]="paginationLabel" [totalItemsCustom]="rows.length"
+        [singularText]="paginationLabel"></sq-pagination-shared>
+    <!-- <pagination-template #p="paginationApi" (pageChange)="setPage($event)" [id]="defaultPaginationConfig.id">
+        <div class="pagination-container" *ngIf="p">
+            <ul class="pagination">
+                <li class="navigation" [class.disabled]="p.isFirstPage()">
+                    <a *ngIf="!p.isFirstPage()" (click)="p.previous()" href="javascript:void(0)">
+                        <i class="icon-left-arrow"></i>
+                    </a>
+                    <a *ngIf="p.isFirstPage()" href="javascript:void(0)">
+                        <i class="icon-left-arrow"></i>
+                    </a>
+                </li>
+                <li class="summary"><span>{{ p.isLastPage() ? p.getTotalItems() : p.getCurrent() * defaultPaginationConfig.itemsPerPage }} of {{ p.getTotalItems() }}
+                        {{ paginationLabel }}</span></li>
+                <li class="navigation" [class.disabled]="p.isLastPage()"><a *ngIf="!p.isLastPage()" (click)="p.next()"
+                        href="javascript:void(0)"><i class="icon-right-arrow"></i></a><a *ngIf="p.isLastPage()"
+                        href="javascript:void(0)"><i class="icon-right-arrow"></i></a></li>
+            </ul>
+        </div>
+    </pagination-template> -->
+</ng-container>

@@ -1,0 +1,357 @@
+{
+  "user": {
+    "rol": {
+      "admin": "Administrador",
+      "team": "Team",
+      "manager": "Manager"
+    }
+  },
+  "pages": {
+    "language-picker": {
+      "language": "Lenguaje"
+    },
+    "commons": {
+      "sentiments": {
+        "good": "Good",
+        "bad": "Bad",
+        "neutral": "Neutral",
+        "excelent": "Excelent"
+      },
+      "timeFilter": {
+        "textCompareStatistic": {
+          "annual": "Year",
+          "monthly": "month",
+          "weekly": "Week",
+          "historical": "Period",
+          "current": "en curso",
+          "previous": "anterior"
+        }
+      },
+      "postTypes": {
+        "live_type": "Live",
+        "video_type": "Video",
+        "video": "Video",
+        "text_type": "Text",
+        "note_type": "Note",
+        "advertisements_type": "Advertisements",
+        "offers": "Offers",
+        "job_offers_type": "Jobs",
+        "poll_type": "Poll",
+        "link": "Link",
+        "image_type": "Image",
+        "status": "Status",
+        "photo": "Photo"
+      }
+    },
+    "pulse": {
+      "facebook": {
+        "general": {
+          "fans": "Fans",
+          "reach": "Reach",
+          "engagedUser": "Engaged users",
+          "engagementRate": "Engagement rate"
+        },
+        "community": {
+          "fans": "Fans",
+          "organicFans": "Organic fans",
+          "paidFans": "Paid fans",
+          "viralFans": "Viral fans",
+          "comparission": {
+            "investment": "Investment",
+            "engagedUser": "Engaged users",
+            "reach": "Unique impressions",
+            "impressionsTotal": "Total impressions",
+            "impressionsPaid": "Paid impressions",
+            "impressionsOrganic": "Organic impressions",
+            "impressionsViral": "Viral impressions",
+            "engagementRate": "Engagement rate",
+            "engagementTotal": "Total engagement",
+            "engagementPaid": "Paid engagement",
+            "engagementOrganic": "Organic Engagement",
+            "engagementViral": "Viral Engagement"
+          }
+        },
+        "activity": {
+          "investment": "Investment",
+          "impressionsTotal": "Total impressions",
+          "reach": "Reach",
+          "engagementTotal": "Interactions",
+          "campaignFrequency": "Campaign Frequency",
+          "campaignReach": "Campaign Reach",
+          "relevanceScore": "Relevance Score",
+          "campaignCtr": "Campaigne CTR",
+          "comparission": {
+            "engagedUser": "Engaged users",
+            "impresionsPaid": "Paid impressions",
+            "impresionsOrganic": "Organic impressions",
+            "impresionsViral": "Viral impressions"
+          }
+        },
+        "performance": {
+          "engagementRate": "Engagement Rate",
+          "engagedUser": "Engaged users",
+          "pta": "PTA",
+          "postPerformanceRatio": "Post performance ratio",
+          "reactionsCount": "Reactions",
+          "shares": "Shares",
+          "comments": "Comments",
+          "clicks": "Clicks by campaign",
+          "videoViewsEvolution": "Video Views",
+          "comparission": {
+            "reach": "Reach",
+            "impressionsTotal": "Total impressions",
+            "impressionsPaid": "Paid impressions",
+            "impressionsOrganic": "Organic impressions",
+            "impressionsViral": "Viral impressions",
+            "engagementTotal": "Interactions"
+          },
+          "impressions": {
+            "impressionsPaid": "Paid",
+            "impressionsOrganic": "Organic",
+            "impressionsViral": "Viral"
+          }
+        },
+        "response": {
+          "comments": "Comments",
+          "privateMessages": "Private messages"
+        }
+      },
+      "apps": {
+        "general": {
+          "installs": "Installs",
+          "globalRanking": "Global ranking",
+          "countryRanking": "Country ranking",
+          "categoryRanking": "Category ranking"
+        }
+      },
+      "youtube": {
+        "general": {
+          "subscribers": "Suscriptores",
+          "newSubscribers": "Nuevos suscriptores",
+          "minutesViewed": "Minutos visionados"
+        },
+        "community": {
+          "subscribers": "Suscriptores",
+          "newSubscribers": "Nuevos suscriptores",
+          "drop": "Minutos visionados",
+          "visits": "Visitas"
+        },
+        "activity": {
+          "investment": "Investement",
+          "ctr": "CTR",
+          "interactions": "Interactions",
+          "clicksAnnotations": "Clicks/ anotaciones"
+        },
+        "performance": {
+          "annotationImpressions": "Favoritos",
+          "likes": "Me gusta",
+          "dislike": "No me gusta",
+          "shares": "Shares",
+          "comments": "Comentarios",
+          "clicksImpressions": "Clicks"
+        }
+      },
+      "instagram": {
+        "general": {
+          "followers": "Seguidores",
+          "reach": "Reach",
+          "visits": "Visitas",
+          "engagement": "Engagement"
+        },
+        "community": {
+          "newFollowers": "Nuevos seguidores",
+          "organicFollowers": "Seguidores orgánicos",
+          "paidFollowers": "Seguidores pago",
+          "viralFollowers": "Seguidores virales",
+          "comparission": {
+            "investment": "Investment",
+            "engagedUser": "Engaged users",
+            "reach": "Unique impressions",
+            "impressionsTotal": "Total impressions",
+            "impressionsPaid": "Paid impressions",
+            "impressionsOrganic": "Organic impressions",
+            "impressionsViral": "Viral impressions",
+            "engagementRate": "Engagement rate",
+            "engagementTotal": "Total engagement",
+            "engagementPaid": "Paid engagement",
+            "engagementOrganic": "Organic Engagement",
+            "engagementViral": "Viral Engagement"
+          }
+        },
+        "activity": {
+          "investment": "Inversión",
+          "impresionsTotal": "Impresiones totales",
+          "reach": "Reach",
+          "interactions": "Interacciones",
+          "campaignFrequency": "Campaign Frequency",
+          "campaignReach": "Campaign Reach",
+          "relevanceScore": "Relevance Score",
+          "campaignCtr": "Campaigne CTR",
+          "comparission": {
+            "engagedUser": "Engaged users",
+            "impressionsPaid": "Paid impressions",
+            "impressionsOrganic": "Organic impressions",
+            "impressionsViral": "Viral impressions"
+          }
+        },
+        "performance": {
+          "engagementRate": "Engagement Rate",
+          "onlineFollowers": "Online followers",
+          "stories": "Stories",
+          "postPerformanceRatioStories": "Post performance ratio stories",
+          "engagement": "Engagement",
+          "impressions": "Impresiones",
+          "reach": "Reach",
+          "saves": "Saves",
+          "engagementFeatured": "Engagement",
+          "impressionsFeatured": "Impresiones",
+          "reachFeatured": "Reach",
+          "savesFeatures": "Saves",
+          "replies": "Replies",
+          "impressionsFeaturedStories": "Impresiones",
+          "reachFeaturedStories": "Reach",
+          "exits": "Exits",
+          "videoPlayActions": "Video play actions",
+          "comparission": {
+            "replies": "Replies",
+            "impressions": "Impresiones",
+            "reach": "Reach",
+            "exits": "Exits"
+          }
+        },
+        "response": {
+          "privateMessages": "Mensajes Privados",
+          "comments": "Comentarios"
+        }
+      },
+      "sites": {
+        "general": {
+          "views": "Visitas",
+          "uniqueViews": "Visitas únicas",
+          "bonusRate": "Bounce rate",
+          "convertionRate": "Convertion rate"
+        }
+      },
+      "twitter": {
+        "general": {
+          "followers": "Seguidores",
+          "reach": "Reach",
+          "engagement": "Engagement",
+          "engagementUser": "Engagement users"
+        },
+        "community": {
+          "followers": "Seguidores",
+          "following": "Seguidos",
+          "tweets": "Tweets",
+          "ratio": "Ratio"
+        },
+        "activity": {
+          "investment": "Investement",
+          "impresions": "Impresions",
+          "interactions": "Interactions",
+          "reach": "Reach"
+        },
+        "performance": {
+          "engagement": "Engagement",
+          "sponsored": "Sponsored",
+          "organicView": "Organic view",
+          "firstView": "First view",
+          "likes": "Likes",
+          "retweets": "Retweets",
+          "comments": "Comments",
+          "ctr": "CTR"
+        },
+        "response": {
+          "comments": "Comentarios",
+          "hashtagsClicks": "Hashtag clicks",
+          "impresions": "Impresiones"
+        }
+      }
+    },
+    "bench": {
+      "facebook": {
+        "general": {
+          "fans": "Fans",
+          "reach": "Reach",
+          "engagement": "Engagemet",
+          "engagementUser": "Engaged Users"
+        },
+        "performance": {
+          "reactions": "Reactions",
+          "shares": "Shares",
+          "comments": "Comments",
+          "interactions": "Interactions"
+        },
+        "content": {
+          "live": "Live",
+          "photo": "Fotos",
+          "note": "Notas",
+          "video": "Videos",
+          "other": "Otros"
+        }
+      },
+      "instagram": {
+        "general": {
+          "fans": "Fans",
+          "reach": "Reach",
+          "engagement": "Engagemet",
+          "engagementUser": "Engaged Users"
+        },
+        "performance": {
+          "like": "Likes",
+          "comments": "Comentarios",
+          "clicks": "Clicks",
+          "photo": "Fotos",
+          "video": "Videos"
+        }
+      },
+      "youtube": {
+        "general": {
+          "subscribers": "Suscriptores",
+          "views": "Visualizaciones",
+          "videos": "Minutos visualizados"
+        },
+        "performance": {
+          "fans": "Favoritos",
+          "like": "Me gusta",
+          "dislikes": "No me gusta",
+          "shares": "Shares",
+          "comments": "Comentarios",
+          "clicks": "Clicks"
+        }
+      },
+      "twitter": {
+        "general": {
+          "fans": "Fans",
+          "reach": "Reach",
+          "engagement": "Engagemet",
+          "engagementUser": "Engaged Users"
+        },
+        "performance": {
+          "like": "Likes",
+          "retweets": "Retweets",
+          "comments": "Comments",
+          "ctr": "CTR"
+        },
+        "content": {
+          "text": "Texto",
+          "image": "Fotos",
+          "video": "Video",
+          "gif": "GIF",
+          "mixed": "Mixto"
+        },
+        "response": {
+          "comments": "Comentarios",
+          "hashtagClicks": "Hashtag clicks",
+          "impresions": "Impresiones"
+        }
+      }
+    }
+  },
+  "enums": {
+    "languages": {
+      "en": "Inglés",
+      "es": "Español"
+    }
+  }
+}

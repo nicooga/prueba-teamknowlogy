@@ -1,0 +1,10 @@
+<div #stackedGraphShared id="stackedGraphShared" class="sq-graph-bar-stacked">
+	<button (click)="scrollBack()" *ngIf="currentPage !== 1 && totalPages > 1" class="prev-btn"
+		[class.d-flex]="paginateGraph" id="table-back" type="button">
+		<i class="zmdi zmdi-arrow-left"></i>
+	</button>
+	<button (click)="scrollNext()" *ngIf="currentPage !== totalPages && totalPages > 1" class="next-btn"
+		[class.d-flex]="paginateGraph" id="table-next" type="button">
+		<i class="zmdi zmdi-arrow-right"></i>
+	</button>
+</div>

@@ -1,0 +1,88 @@
+<header>
+	<sq-main-bar></sq-main-bar>
+	<sq-secondary-menu>
+	</sq-secondary-menu>
+	<sq-sidebar-menu-scroll></sq-sidebar-menu-scroll>
+</header>
+<div class="section-primary-container">
+	<div class="container">
+		<div class="sections-distributed">
+			<div class="row">
+				<div class="col-md-12 mx-auto">
+					<div class="pulse-small-card-container">
+						<div class="row">
+							<div class="col-md-3 col-12">
+								<sq-card-shared textTooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit" title="Card 1">
+								</sq-card-shared>
+							</div>
+							<div class="col-md-3 col-12">
+								<sq-card-shared textTooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit" title="Card 2">
+								</sq-card-shared>
+							</div>
+							<div class="col-md-3 col-12">
+								<sq-card-shared textTooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit " title="Card 3">
+								</sq-card-shared>
+							</div>
+							<div class="col-md-3 col-12">
+								<sq-card-shared textTooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit" title="Card 4">
+								</sq-card-shared>
+							</div>
+						</div>
+					</div>
+					<br><br><br><br>
+					<sq-card-shared [extraClasses]="{'interaction-card ': true}" textTooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+						title="Ejemplo">
+						<div class="stacked-graph" *ngIf="showGraph">
+							<sq-graph-bar-stacked-shared id="graph-type-1" [cornerRoundedTablet]="4"
+								titleTooltip="Text" [cornerRounded1200]="cornerRounded1200"
+								[cornerRounded1024]="cornerRounded1024" [cornerRoundedTablet]="cornerRoundedTablet"
+								[cornerRoundedMobile]="cornerRoundedMobile" [tickPaddingX1200]="25"
+								[tickPaddingX1024]="25" [tickPaddingXTablet]="25" [tickPaddingXMobile]="25"
+								[paddingInner]="paddingForBars"></sq-graph-bar-stacked-shared>
+						</div>
+
+					</sq-card-shared>
+					<br><br><br><br>
+
+					<!--Geolocalization-->
+					<div class="row squint-geolocalization">
+						<div class="col-lg-8">
+							<div class="row">
+								<div class="col-12 col-md-6">
+									<div class="table-chart-content countries">
+										<sq-ranking-table-shared title="Fans by Country" paginationLabel="countries"
+											[data]="rankingCountries" [selectedRow]="selectedCountry"
+											(rankingOnSelectRow)="rankingOnSelectRow($event)"
+											(rankingOnChangePage)="onChangePage($event)">
+										</sq-ranking-table-shared>
+									</div>
+								</div>
+								<div class="col-12 col-md-6">
+									<div class="table-chart-content cities">
+										<sq-ranking-table-shared title="Fans by City" paginationLabel="cities"
+											[activeRow]="false" [data]="rankingCities" [classname]="'table-grey'"
+											(rankingOnSelectRow)="rankingCityOnSelectRow($event)">
+										</sq-ranking-table-shared>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<sq-chart-map-shared #squintWorldMap id="squintWorldMap"
+								[countriesActives]="rankingCountries" [statesActives]="rankingCities"
+								(chartMapOnClickCountry)="chartMapOnClickCountry($event)">
+							</sq-chart-map-shared>
+						</div>
+					</div>
+					<br><br><br><br>
+					<br><br><br><br>
+					<br><br><br><br>
+					<br><br><br><br>
+					<br><br><br><br>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

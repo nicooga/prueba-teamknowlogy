@@ -1,0 +1,247 @@
+.table-chart {
+	.container-wrapper-inline {
+	  margin-bottom: 36px;
+	  /** /custom theme **/
+	  .table-wrapper {
+		.table-header {
+		  h5 {
+			font-weight: $font-weight-semi-bold;
+			padding-left: 10px;
+			margin-bottom: $font-size-base * 1.875;
+			@include media-breakpoint-down(sm) {
+			  padding-left: 0;
+			}
+
+			@include media-breakpoint-down(lg) {
+				font-size: 15px !important;
+			}
+		  }
+		}
+		.data-wrapper {
+		  .datum {
+			position: relative;
+			line-height: 32px;
+			display: block;
+			margin-bottom: 16px;
+			color: #3b3b3b;
+			.d-wrapper {
+			  position: relative;
+			  display: inline-block;
+			  width: 100%;
+			  padding-left: 35px;
+			  line-height: 32px;
+			  .d-position {
+				width: 32px;
+				height: 32px;
+				background-color: $secondary-color;
+				display: block;
+				position: absolute;
+				left: 0;
+				font-size: 15px;
+				font-family: 'Gothic A1';
+				font-weight: $font-weight-semi-bold;
+				text-align: center;
+				line-height: 32px;
+			  }
+			  .d-subject-wrapper {
+				display: inline-block;
+				height: 32px;
+				width: 100%;
+				border-bottom: 1px solid #cecece;
+				.d-block {
+				  font-family: 'Gothic A1';
+				  font-family: $font-weight-normal;
+				  font-size: 15px;
+				  color: #4a4a4a;
+				  letter-spacing: -0.1px;
+
+				  @include media-breakpoint-down(lg) {
+					  font-size: 12px;
+				  }
+				  @include media-breakpoint-down(md) {
+					  font-size: 15px;
+				  }
+				}
+				.d-subject {
+				  position: relative;
+				  width: calc(100% - 95px);
+				  padding-right: 14px;
+				  padding-left: 6px;
+				  float: left;
+				  .d-kpi {
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -7.5px;
+				  }
+				}
+				.d-value {
+				  float: left;
+				  width: 95px;
+				  padding-right: 10px;
+				  text-align: right;
+				  font-family: 'Gothic A1';
+				  font-weight: $font-weight-semi-bold;
+				}
+			  }
+			}
+			&.active {
+			  .d-wrapper {
+				.d-subject-wrapper {
+				  border-bottom-color: $gray-700;
+				  background-color: rgba(#f7f7f7, 0.87);
+				  .d-subject {
+					font-weight: $font-weight-semi-bold;
+				  }
+				}
+			  }
+			}
+			&:hover {
+			  cursor: pointer;
+			  .d-wrapper {
+				.d-subject-wrapper {
+				  border-bottom-color: $gray-700;
+				}
+			  }
+			}
+			&:last-child {
+			  margin-bottom: 0;
+			}
+		  }
+		}
+	  }
+	}
+  
+	@include media-breakpoint-up(md) {
+	  .container-wrapper-inline {
+		.table-wrapper {
+		  .data-wrapper {
+			.datum {
+			  .d-wrapper {
+				padding-left: 45px;
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  
+	@include media-breakpoint-up(lg) {
+	  .container-wrapper-inline {
+		margin-bottom: 31px;
+		.table-wrapper {
+		  .data-wrapper {
+			.datum {
+			  .d-wrapper {
+				padding-left: 35px;
+				.d-subject-wrapper {
+				  .d-subject {
+					font-size: 10px;
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  
+	@include media-breakpoint-up(xl) {
+	  .container-wrapper-inline {
+		.table-wrapper {
+		  .data-wrapper {
+			.datum {
+			  .d-wrapper {
+				padding-left: 45px;
+				.d-subject-wrapper {
+				  .d-subject {
+					font-size: 12px;
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+  
+  .pagination-container {
+	text-align: center;
+	.pagination {
+	  display: inline-block;
+	  > li {
+		display: inline-block;
+		line-height: 20px;
+		float: left;
+	  }
+	  .navigation {
+		text-align: center;
+		> a {
+		  padding: 0 5px;
+		  width: 10px;
+		  color: #9b9b9b;
+		  font-size: 15px;
+		  &:hover {
+			text-decoration: none;
+			&:not(.disabled) {
+			  color: #cecece;
+			}
+		  }
+		}
+  
+		&.disabled {
+		  > a {
+			color: #cecece;
+		  }
+		}
+	  }
+  
+	  .summary {
+		font-family: $font-family-base;
+		font-weight: $font-weight-normal;
+		padding: 0 15px;
+		font-size: 15px;
+		color: #636363;
+		letter-spacing: -0.08px;
+	  }
+	}
+	@include media-breakpoint-up(md) {
+	}
+  
+	@include media-breakpoint-up(lg) {
+	  .pagination {
+		.summary {
+		  font-size: 12px;
+		}
+	  }
+	}
+  
+	@include media-breakpoint-up(xl) {
+	  .pagination {
+		.summary {
+		  font-size: 12px;
+		}
+	  }
+	}
+  }
+  .table-chart {
+	&.table-grey {
+	  .container-wrapper-inline {
+		.table-wrapper {
+		  .data-wrapper {
+			.datum {
+			  .d-wrapper {
+				.d-position {
+				  background-color: $gray7;
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+  
+  
+  

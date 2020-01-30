@@ -1,0 +1,24 @@
+<div class="panel" [class.active]="showPanel">
+  <div class="panel-height">
+    <div class="header-panel">
+      <div class="logo" *ngIf="!showBack">
+        <img [src]="lightLogo" alt="">
+      </div>
+      <div class="back" *ngIf="showBack">
+          <a (click)="backEvent.emit(null);closePanel()">
+            <i class="squint icon-preview"></i>
+            Volver
+          </a>
+        </div>
+      <button class="close-panel" (click)="closePanel()">
+        <i class="squint icon-close"></i>
+      </button>
+    </div>
+    <div class="body-panel">
+      <div class="body-content">
+        <h1 [class]="classTitle" *ngIf="!noTitle">{{title}}</h1>
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

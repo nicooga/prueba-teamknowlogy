@@ -1,0 +1,137 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "abstracts/variables";
+
+:host {
+    /deep/ #nav-main {
+        transition: .3s;
+
+        &.scroll-on {
+            @include media-breakpoint-up(lg) {
+                padding-bottom: 15px;
+
+            .navbar-breadcrumb {
+                top: 20px;
+            }
+            }
+            
+        }
+    }
+    /deep/ #nav-secondary {
+        transition: .3s;
+        box-shadow: none;
+
+        &.scroll-on {
+            @include media-breakpoint-up(lg) {
+                top: 65px;
+            }
+            
+
+            // @include media-breakpoint-down(md) {
+            //     top: 57px;
+            // }
+        }
+
+        .dropdown-menu {
+			
+			top: auto !important;
+  
+		  }
+    }
+
+    /deep/ .card-generic {
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 16px !important;
+        }
+
+        &.interaction-card {
+
+            @include media-breakpoint-up(xl) {
+                max-height: 412px;
+                height: 412px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                max-height: 326px;
+                height: 326px;
+            }
+
+            /deep/ .card-generic-title {
+                h1 {
+                    @include media-breakpoint-down(lg) {
+                        margin-bottom: 20px !important;
+                    }
+                }
+            }
+
+            /deep/ .stacked-graph {
+
+                @include media-breakpoint-up(xl) {
+                    height: 288px;
+                    margin-top: -11px;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    height: 248px;
+                    margin-top: -13px;
+                }
+
+                svg {
+                    overflow: inherit;
+                }
+
+                // .axis--x {
+                //     text {
+                //         @include media-breakpoint-up(xl) {
+                //             font-size: 15px !important;
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+
+    .squint-geolocalization {
+        @include media-breakpoint-up(xl) {
+            margin-top: 21px;
+            margin-bottom: 14px;
+
+        }
+
+        .table-chart-content {
+            &.countries {
+                max-width: 305px;
+
+                @include media-breakpoint-down(lg) {
+                    max-width: 247px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    max-width: 343px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 25px;
+                }
+
+            }
+
+            /deep/ sq-pagination-shared {
+                .squint-pagination {
+                    span {
+                        @include media-breakpoint-down(md) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /deep/ .world-map-chart {
+        @include media-breakpoint-down(md) {
+            margin-top: 25px;
+        }
+    }
+}

@@ -1,0 +1,202 @@
+<!-- <ng-template #dropdownUserContent>
+  <div class="dropdown-menu-user-container">
+    <div class="user-profile">
+      <sq-avatar clazz="avatar-big" [user]="currentUser"></sq-avatar>
+      <span class="user-name text-truncate">
+        <div *ngIf="currentUser.name && currentUser.name.length > 0; else emailBlock">
+          {{ currentUser.name + ' '+ currentUser.lastName}}
+        </div>
+        <ng-template #emailBlock>
+          {{ currentUser.email }}
+        </ng-template>
+      </span>
+      <span class="user-rol text-truncate">
+        {{ 'user.rol.' + currentUser.rol}}
+      </span>
+      <a class="user-to-profile" routerLink="../my-profile">
+        Ver mi perfil
+      </a>
+    </div>
+    <div class="divider"></div>
+    <ul class="user-menu-settings">
+      <li *ngIf="currentUser.rol === 'admin'">
+        <a routerLink="../configurations">
+          <i class="icon-settings"></i>
+          Configuraciones
+        </a>
+      </li>
+      <li *ngIf="currentUser.rol === 'admin'">
+        <a href="javascript:void(0)" routerLink="../users">
+          <i class="icon-users"></i>
+          Administración de Users
+        </a>
+      </li>
+      <li>
+        <a routerLink="../languages">
+          <i class="icon-flag"></i>
+          Idioma
+        </a>
+      </li>
+      <li *ngIf="currentUser.rol === 'admin'">
+        <a href="javascript:void(0)" routerLink="../billing">
+          <i class="icon-file-text"></i>
+          Facturación
+        </a>
+      </li>
+      <li *ngIf="currentUser.rol === 'admin'">
+        <a href="javascript:void(0)" routerLink="../support">
+          <i class="icon-headphones"></i>
+          Soporte
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" routerLink="../plans">
+          <i class="icon-box"></i>
+          Planes
+        </a>
+      </li>
+    </ul>
+    <div class="divider"></div>
+    <ul class="user-menu-settings" id="user-menu-close-session">
+      <li>
+        <a href="javascript:void(0)" (click)="logoutUser()">
+          <i class="icon-power"></i>
+          Cerrar sesión
+        </a>
+      </li>
+    </ul>
+  </div>
+</ng-template> -->
+
+<nav class="navbar navbar-expand-lg" id="nav-main">
+  <!--Container-->
+  <div
+    [class.no-logo]="basicMainBar">
+    <div class="navbar-wrapper">
+      <!--Brand-->
+      <a class="navbar-brand" *ngIf="!basicMainBar">
+        <img >
+      </a>
+      <!--Bread crumb-->
+      <h4 class="navbar-breadcrumb">
+        
+      </h4>
+      <!--Navbar-->
+      <ul class="navbar-nav ml-auto">
+       
+
+      </ul>
+      <!--Burguer menu-->
+      <a class="burguer-menu" [class.active]="!collapseMobileMenu" (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="!collapseMobileMenu" aria-controls="collapseExample">
+        <span *ngIf="collapseMobileMenu" class="icon-burguer3"></span>
+        <span *ngIf="!collapseMobileMenu" class="icon-close"></span>
+      </a>
+    </div>
+  </div>
+
+
+  <sq-panel-search-item [showPanel]="!collapseMobileMenu" [noTitle]="true" (closePanelEvent)="toggleMobileMenu()">
+
+      <div class="menu-squint">
+          <h1>Menú</h1>
+          <div class="divider-menu" *ngIf="!basicMainBar"></div>
+         
+        </div>
+        </sq-panel-search-item>
+
+  <!--Collapse nav-->
+  <!-- <div class="collapse navbar-collapse collapse" id="main-bar-mobile-menu" [ngbCollapse]="collapseMobileMenu">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown" ngbDropdown>
+        <div class="nav-link" id="my-glances-btn" ngbDropdownToggle>
+          <div class="container container-sm container-md">
+            <div class="container-nav-link">
+              <span class="container-nav-link-ico">
+                <i class="nav-link-ico svg-icon" id="my-glances-ico" [inlineSVG]="'assets/images/vistazos.svg'"></i>
+              </span>
+
+              Mis vistazos
+            </div>
+          </div>
+        </div>
+
+        <div id="my-glances-dropdown" class="dropdown-menu" aria-labelledby="dropdown-glances-btn" ngbDropdownMenu>
+          <div class="container container-sm container-md">
+            <div class="container-nav-link">
+              <ng-container *ngFor="let brand of myGlances">
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <div class="avatar-rounded" [ngStyle]="{'background-image': 'url(' + brand.avatar + ')'}">
+                  </div>
+                  {{brand?.name}}
+                </a>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item ">
+        <div id="new-search" class="nav-link">
+          <div class="container container-sm container-md">
+            <div class="container-nav-link">
+              <span class="container-nav-link-ico">
+                <i class="nav-link-ico svg-icon" id="new-search-ico" [inlineSVG]="'assets/images/add-search.svg'"></i>
+              </span>
+              Nueva búsqueda
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div id="link-notifications" class="nav-link">
+          <div class="container container-sm container-md">
+            <div class="container-nav-link">
+              <span class="container-nav-link-ico">
+                <span class="notification-icon">
+                  <i class="svg-icon" [inlineSVG]="'assets/images/notification.svg'">
+                  </i>
+                  <span class="badge badge-light">2</span>
+                </span>
+              </span>
+              Mensajes
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div id="user-link-profile" class="nav-link" (click)="toggleUserMenuMobile()">
+          <div class="container container-sm container-md">
+            <div class="container-nav-link">
+              <span class="container-nav-link-ico">
+                <app-avatar  [user]="currentUser" clazz="avatar-medium"></app-avatar>
+              </span>
+              Mi perfil
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+  </div> -->
+  <!--Menu user-->
+  <!-- <div id="user-menu-mobile-wrapper" [class.show]="showUserMenuMobile">
+    <div class="user-menu-mobile-container"> -->
+      <!--Menu-->
+      <!-- <div class="user-menu-mobile-menu">
+        <a class="user-menu-mobile-back">
+          <span class="icon-down-arrow" href="javascript:void(0)" (click)="toggleUserMenuMobile()"></span>
+        </a>
+        <a class="user-menu-mobile-close" href="javascript:void(0)" (click)="toggleMobileMenu()">
+          <span class="icon-close"></span>
+        </a>
+      </div> -->
+      <!--User dropdown-->
+      <!-- <div id="dropdown-menu-user-mobile" class="dropdown-menu dropdown-menu-user">
+        <ng-container *ngTemplateOutlet="dropdownUserContent"></ng-container>
+      </div>
+    </div>
+
+
+  </div> -->
+</nav>

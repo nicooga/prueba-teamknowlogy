@@ -1,0 +1,31 @@
+<pagination-template #p="paginationApi" [id]="config.id" (pageChange)="getPage($event, p.getTotalItems())" >
+
+  <div class="squint-pagination {{extraClass}}">
+    <div class="content">
+      <button *ngIf="(p.isFirstPage() && !customFunctions) || (customFunctions && pageCustom === 1)" [class.disabled]="(p.isFirstPage() && !customFunctions) || (customFunctions && pageCustom === 1)">
+        <i class="squint icon-left-arrow"></i>
+      </button>
+      <button *ngIf="(!p.isFirstPage() && !customFunctions) || (customFunctions && pageCustom !== 1)" (click)="p.previous();clickChangePage('previous')">
+        <i class="squint icon-left-arrow"></i>
+      </button>
+      <span *ngIf="type === 1">
+          {{ p.getCurrent() }}-{{ p.pages.length }} {{p.getTotalItems() !== 1 ? pluralText : singularText}}
+      </span>
+      <span *ngIf="type === 2">
+        {{itemsTotalPerPage}} of {{totalItemsCustom !== null ? totalItemsCustom : p.getTotalItems()}} {{p.getTotalItems() !== 1 ? pluralText : singularText}}
+      </span>
+      <span *ngIf="type === 3">
+        {{itemsTotalPerPage}} - {{totalItemsCustom}} {{totalItemsCustom !== 1 ? pluralText : singularText}}
+      </span>
+      <button class="" *ngIf="(!p.isLastPage() && !customFunctions) || (customFunctions && pageCustom !== totalPagesCustom)" (click)="p.next();clickChangePage('next')">
+        <i class="squint icon-right-arrow"></i>
+
+      </button>
+      <button *ngIf="(p.isLastPage() && !customFunctions) || (customFunctions && pageCustom === totalPagesCustom)" [class.disabled]="(p.isLastPage() && !customFunctions) || (customFunctions && pageCustom === totalPagesCustom)">
+        <i class="squint icon-right-arrow"></i>
+
+      </button>
+    </div>
+
+  </div>
+</pagination-template>

@@ -1,0 +1,86 @@
+.basic-swiper-container {
+    // border-radius: 5px;
+    position: relative;
+	// background-color: white;
+	
+	sq-card-pulse-circle-graph-shared {
+		display: flex;
+		.info-card {
+			max-height: 366px !important;
+		}
+	}
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: white;
+        opacity: 0.31;
+        background: #9B9BD7;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        z-index: 3;
+        transition: .3s;
+        outline: none;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        display: flex;
+        &:hover {
+            opacity: 1;
+        }
+
+        &:after {
+            font-size: 21px !important;
+            font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+        }
+
+        &.swiper-button-disabled {
+            display: none;
+        }
+    }
+
+    .swiper-button-next {
+        // display:none;
+        right: -20px;
+
+        &:after {
+            content: '\f2ee';
+        }
+    }
+
+    .swiper-button-prev {
+        // display:none;
+        left: -20px;
+
+        &:after {
+            content: '\f2ea';
+        }
+    }
+
+    // .basic-swiper {
+    //   width: 100%;
+    //   height: 100%;
+    //   box-shadow: 0 3px 4px -2px grey;
+    //   border-radius: 5px;
+    //   .swiper-slide {
+    // 	text-align: center;
+    // 	font-size: 18px;
+    // 	background: #fff;
+    // 	// border-radius:5px;
+    // 	/* Center slide text vertically */
+    // 	display: -webkit-box;
+    // 	display: -ms-flexbox;
+    // 	display: -webkit-flex;
+    // 	display: flex;
+    // 	-webkit-box-pack: center;
+    // 	-ms-flex-pack: center;
+    // 	-webkit-justify-content: center;
+    // 	justify-content: center;
+    // 	-webkit-box-align: center;
+    // 	-ms-flex-align: center;
+    // 	-webkit-align-items: center;
+    // 	align-items: center;
+    //   }
+    // }
+}

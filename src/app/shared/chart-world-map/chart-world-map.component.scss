@@ -1,0 +1,244 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "abstracts/variables";
+
+:host {
+  display: inline-block;
+  width: 100%;
+
+}
+
+  .world-map-chart {
+      .header {
+        margin-left: 0px;
+        h5 {
+          font-weight: $font-weight-semi-bold;
+        }
+        @include media-breakpoint-up(md) {
+          margin-left: 18px;
+        }
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 20px;
+          margin-left: 10px;
+        }
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 20px;
+          margin-left: 10px;
+        }
+      }
+      svg.world-map {
+        g.map-layer {
+          .boundary-countries {
+            path.country {
+              &.active {
+                fill: $secondary-color;
+
+                
+              }
+
+              &.active:not(.active-zoom) {
+                fill-opacity: 0.7;
+              }
+              &.active-zoom {
+                stroke: #9b9b9b;
+                stroke-width: 0.5;
+              }
+              &:hover {
+                &.active:not(.active-zoom) {
+                  cursor: zoom-in;
+                  fill-opacity: 0.7;
+                }
+                &.active-zoom {
+                  cursor: zoom-out;
+                }
+              }
+            }
+          }
+          .boundary-states {
+            circle.city {
+              &:hover {
+                cursor: pointer;
+                stroke-opacity: 1;
+              }
+            }
+          }
+        }
+        &.zoomed {
+          g.map-layer {
+            .boundary-countries {
+              path.country {
+                &:hover {
+                  &.active:not(.active-zoom) {
+                    fill-opacity: 0.7;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+
+
+// .world-map-chart {
+//   .header {
+//     h5 {
+//       @include media-breakpoint-down(lg) {
+//         font-size: 18px !important;
+//       }
+//     }
+//   }
+// }
+.word-map-wrapper{
+    display: inline-block;
+    width: 100%;
+    margin-top: 1.5em;
+    height: auto;
+    min-height: 236px;
+    transform:translateZ(0);
+}
+#word-map-container {
+  transform-origin: 0 0;
+}
+
+:host ::ng-deep{
+  svg.world-map{
+    g.map-layer{
+      g.country{
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.cities-modal {
+  .modal-dialog {
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 30%;
+    margin: 0 auto;
+  }
+  .modal-header {
+    border: none;
+      padding: 20px 30px;
+      padding-bottom: 0px;
+  
+      .close {
+        padding-top: 13px;
+      padding-bottom: 0px;
+
+      &:focus {
+        outline: none;
+      }
+      }
+  }
+}
+
+
+.legend-country {
+  font-size: 18px;
+    margin-bottom: -6px;
+}
+
+.legends-modal {
+  list-style: none;
+  max-height: 340px;
+  margin-bottom: 4px;
+
+  overflow: scroll;
+  padding-right: 15px;
+  padding-left: 30px;
+
+  > li {
+    padding: 5px 0px;
+    position: relative;
+    .legend {
+      height: initial;
+      .legend-indicator {
+        background-color: #F8CB1C;
+        left: -15px;
+    top: 10px;
+        width: 7px;
+              height: 7px;
+              border-radius: 7px;
+              display: block;
+              position: absolute;
+              // left: 0;
+              // top: 50%;
+              // margin-top: -3.5px;
+      }
+      .legend-label {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+              color: #3b3b3b;
+              font-size: 12px;
+              align-items: center;
+              position: relative;
+        .legend-text-wrapper,.legend-value-wrapper {
+          font-weight: 400;
+        }
+        .legend-text-wrapper {
+          // padding-right: 15px;
+          margin-bottom: 0px;
+          float: left;
+                display: flex;
+                font-weight: 500;
+                // max-width: 120px;
+                background: white;
+    padding-right: 5px;
+    z-index: 1;
+                float: left;
+                .legend-text {
+                  background: #fff;
+                  position: relative;
+                  z-index: 2;
+                  text-transform: capitalize;
+                }
+        }
+        .legend-value-wrapper {
+          background: white;
+    z-index: 1;
+    padding-left: 5px;
+          display: flex;
+                float: right;
+                text-align: right;
+                position: relative;
+                font-weight: 500;
+          .legend-value {
+            .icon {
+              margin-right: 5px;
+            }
+            .value {
+              display: inline-block;
+              min-width: 52px;
+            }
+          }
+        }
+        .legend-line-dotted {
+          width: 100%;
+          height: 2px;
+          border-bottom: 1px dashed #dbdbdb;
+          position: absolute;
+          bottom: 4px;
+          left: 0;
+        }
+      }
+    }
+    &.selected {
+      font-weight: 600;
+      .legend {
+        .legend-label {
+          .legend-text-wrapper,.legend-value-wrapper {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

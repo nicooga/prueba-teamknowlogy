@@ -1,0 +1,47 @@
+<div class="world-map-chart">
+  <!--Header-->
+  <div class="header">
+    <h5 class="text-5 text-left">
+      {{ title }}
+    </h5>
+  </div>
+  <!--Map container-->
+  <div class="word-map-wrapper" [style.height]="wrapperHeight">
+      <div id="word-map-container" #wordMap></div>
+  </div>
+</div>
+
+<ng-template #modalCities let-c="close" let-d="dismiss">
+    <!-- <span *ngFor="let city of cities">{{city}}</span> -->
+
+  <div class="modal-header">
+    <h1 class="legend-country">{{countrySelect.name}}</h1>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ul class="legends-modal">
+      <li *ngFor="let legend of cities" [class.selected]="citySelect.name === legend.name">
+          <span class="legend">
+              <span class="legend-indicator"></span>
+              <span class="legend-label">
+                  <span class="legend-text-wrapper">
+                    <span class="legend-text">
+                      {{legend.name}}
+                    </span>
+                  </span>
+                  <span class="legend-value-wrapper">
+                    <span class="legend-value">
+                        <span *ngIf="legend.growth === 'up'" class="icon icon-up text-success"></span>
+                        <span *ngIf="legend.growth !== 'up'" class="icon icon-down text-danger"></span>
+                       <span class="value"> {{_decimalPipe.transform(legend.value, '2.')}}</span>
+                      </span>
+                  </span>
+                  <span class="legend-line-dotted"></span>
+               </span>
+           </span>
+      </li>
+    </ul>
+  </div>
+</ng-template>

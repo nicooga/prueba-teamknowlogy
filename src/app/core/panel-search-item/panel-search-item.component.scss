@@ -1,0 +1,139 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
+:host {
+    .panel {
+        width: 100%;
+        background-color: white;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        padding: 30px 30px 30px 30px;
+        overflow: auto;
+        // transition: .8s;
+        height: 0;
+        margin-top: -80px;
+
+        .panel-height {
+            min-height: 500px;
+            margin-bottom: -20px;
+            position: relative;
+        }
+
+        &.active {
+            margin-top: 0px;
+            height: 100vh;
+            z-index: 200;
+        }
+
+        .header-panel {
+            width: 100%;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                float: left;
+                width: 55px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+			}
+			
+			.back {
+                margin-top: 2px;
+
+                a {
+                    font-size: 12px;
+                    color: RGB(var(--buttonsColor));
+                    cursor: pointer;
+
+                    i {
+                        font-size: 9px;
+                        color: RGB(var(--buttonsColor));
+                    }
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+
+            .close-panel {
+                float: right;
+                border: none;
+                color: #DBDBDB;
+                font-size: 14px;
+                transition: .5s;
+                padding: 5px 0px;
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+                outline: none;
+                cursor: pointer;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+
+                &:hover {
+                    // color: #9B9BD7;
+                    color: RGBA(var(--buttonsColor), 0.65);
+                    // background: #9B9BD7;
+                }
+
+            }
+        }
+
+        .body-panel {
+            // display: flex;
+            justify-content: center;
+            width: 100%;
+            float: left;
+            padding-top: 67px;
+
+            .body-content {
+                width: 100%;
+                text-align: center;
+            }
+
+            h1 {
+                font-family: 'proximaNova-regular';
+                margin-bottom: 97px;
+                font-size: 24px;
+                color: RGB(var(--buttonsColor));
+                letter-spacing: 0.4px;
+
+            }
+
+		}
+		
+		@include media-breakpoint-down(sm) {
+            padding: 25px 25px 30px 25px;
+
+			.body-panel {
+                padding-top: 43px;
+                padding-left: 10px;
+                padding-right: 10px;
+                
+                .body-content {
+                    width: 100%;
+
+                    h1 {
+                        font-size: 24px;
+                        margin-bottom: 72px;
+
+                    }
+                }
+                
+            }
+
+            .active {
+                body {
+                    overflow: hidden !important;
+                }
+            }
+		}
+    }
+}

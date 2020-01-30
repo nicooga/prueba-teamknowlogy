@@ -1,0 +1,23 @@
+<!--Avatar-->
+<div *ngIf="user &&  user.avatar; else acronymAvatar" class="avatar-rounded {{clazz}}"
+  [ngStyle]="{ backgroundImage:'url(' + user.avatar + ')'}">
+</div>
+<!--Avatar acronym-->
+<ng-template #acronymAvatar>
+  <div class="avatar-rounded {{clazz}}">
+    <span *ngIf="user.name;then templateName;else templateEmail;">
+      {{user.name.substring(0,1)}}
+    </span>
+
+    <ng-template #templateName>
+      <span class="acronym">
+        {{user.name?.substring(0,1)}}
+      </span>
+    </ng-template>
+    <ng-template #templateEmail>
+      <span class="acronym">
+        {{user.email?.substring(0,1)}}
+      </span>
+    </ng-template>
+  </div>
+</ng-template>

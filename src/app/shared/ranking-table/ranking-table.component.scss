@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "abstracts/variables";
+
+:host .table-chart {
+	.container-wrapper-inline {
+	  .table-wrapper {
+		.data-wrapper {
+		  min-height: 274px;
+		  .datum {
+			&:not(.active) {
+			  &:hover {
+				cursor: pointer;
+				.d-wrapper {
+				  .d-subject-wrapper {
+					background-color: rgba(247, 247, 247, 0.87);
+					border-bottom: 1px solid #cecece;
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+  

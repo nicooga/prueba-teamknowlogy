@@ -1,0 +1,128 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "abstracts/variables";
+
+:host {
+
+    /deep/ .sq-graph-bar-stacked {
+
+        width: 100%;
+        height: 100%;
+
+        .prev-btn,
+        .next-btn {
+            display: none;
+            position: absolute;
+            transform: translate(0px, -50%);
+            top: 40%;
+            height: 36px;
+            width: 36px;
+            opacity: 0.31;
+            background: #9B9BD7;
+            border-radius: 50%;
+            color: white;
+            outline: none;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            border: none;
+
+            i {
+                font-size: 21px;
+            }
+        }
+
+        .d-flex {
+            display: flex !important;
+        }
+
+        .prev-btn {
+            left: -13px;
+        }
+
+        .next-btn {
+            right: -13px;
+        }
+
+        svg {
+            overflow: inherit;
+
+        }
+
+        .axis {
+            &.axis--x {
+                path {
+                    opacity: 1;
+                    stroke: #9b9b9b;
+                    stroke-width: 1px;
+                }
+
+                line {
+                    opacity: 0;
+                    // stroke-width: 45px;
+                }
+
+                text {
+                    font-family: 'Gothic A1';
+                    font-weight: 400;
+                    font-size: 10px;
+                    color: #000000;
+                }
+            }
+
+            &.axis--y {
+                path {
+                    opacity: 0;
+                }
+
+                line {
+                    opacity: 0.1;
+                    stroke-dasharray: 1 2;
+                    stroke-width: 1px;
+                }
+
+                text {
+                    font-family: 'Gothic A1';
+                    font-weight: 400;
+                    font-size: 10px;
+                    color: #000000;
+                    letter-spacing: 0.29px;
+                }
+            }
+
+        }
+
+        .squint-x-y-group-label {
+            font-family: 'Gothic A1';
+            color: #3b3b3b;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            .axis {
+
+                &.axis--y,
+                &.axis--x {
+                    text {
+                        font-size: 12px !important;
+                    }
+                }
+            }
+
+            .squint-x-y-group-label {
+                font-size: 15px;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+
+            .prev-btn,
+            .next-btn {
+                display: flex !important;
+            }
+        }
+    }
+
+}

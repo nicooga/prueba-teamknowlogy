@@ -1,0 +1,42 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
+:host .avatar-rounded {
+	height: 25px;
+	width: 25px;
+	border: 1px solid #fff;
+	border-radius: 25px;
+	background-size: cover;
+	background-position: center;
+	background-color: #c2c2e5;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 23px;
+	.acronym {
+	  text-transform: capitalize;
+	  color: #fff;
+	  font-size: 12px;
+	  display: block;
+	}
+	&.avatar-medium {
+	  height: 28px;
+	  width: 28px;
+	  border: 1px solid #fff;
+	  border-radius: 28px;
+	  line-height: 26px;
+	  .acronym {
+		font-size: 12px;
+	  }
+	}
+	&.avatar-big {
+	  height: 47px;
+	  width: 47px;
+	  border: 1px solid #fff;
+	  border-radius: 47px;
+	  line-height: 45px;
+	  .acronym {
+		font-size: 20px;
+	  }
+	}
+  }
+  
