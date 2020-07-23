@@ -14,8 +14,10 @@ export class EmailInputComponent implements OnInit {
   @Input() placeholder = 'Correo Electrónico';
 
   constructor() {
-    this.internalValue = this.value:
+    this.internalValue = this.value;
   }
+
+  ngOnInit() {}
 
   private
 
