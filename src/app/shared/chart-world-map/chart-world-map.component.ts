@@ -264,6 +264,7 @@ export class ChartWorldMapSharedComponent implements OnInit, OnChanges {
 		this.mapLayer
 			.selectAll('.boundary-states')
 			.remove();
+
 		this.mapLayer
 			.append('g')
 			.attr('class', 'boundary-states')
@@ -288,14 +289,17 @@ export class ChartWorldMapSharedComponent implements OnInit, OnChanges {
 			.style('stroke-opacity', '0.47')
 			.on('mouseover', (d) => {
 				const target = d3.event.target;
+
 				this.showTooltipCity(d, target);
-				d3.select(target).style('fill', '#000000');
+
+        d3.select(target)
+          .style('fill', '#000000')
+          .raise();
 			})
 			.on('mouseleave', (d, i) => {
-				// const target = d3.event.target;
 				this.hideTooltip();
 				const target = d3.event.target;
-				d3.select(target).style('fill', '#9b9b9b');
+        d3.select(target).style('fill', '#9b9b9b');
 			});
 
 	}

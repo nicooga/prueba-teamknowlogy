@@ -516,20 +516,8 @@ export class GraphBarStackedSharedComponent implements OnInit, OnChanges, OnDest
 		// const colors = this.colors.reverse();
 		this.tip = d3Tip()
 			.attr('class', 'pulse-graph-tooltip')
-			.direction(function (d, i) {
-				if (d.i >= Math.ceil(_this.data.length / 2)) {
-					return 'w';
-				} else {
-					return 'e';
-				}
-			})
-			.offset(function (d, i) {
-				if (d.i >= Math.ceil(_this.data.length / 2)) {
-					return [-15, -15];
-				} else {
-					return [-15, 15];
-				}
-			})
+			.direction('s')
+      .offset([15, 0])
 			.html((d: any) => {
 				let html =
 					'<div class="header-tooltip">' + this.titleTooltip + '</div>' +
@@ -722,5 +710,4 @@ export class GraphBarStackedSharedComponent implements OnInit, OnChanges, OnDest
 		//   this.dragOn = false;
 		// }
 	}
-
 }

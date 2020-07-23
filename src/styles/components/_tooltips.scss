@@ -313,8 +313,6 @@
 }
 
 .pulse-graph-tooltip {
-
-
     &.performance {
         min-width: 134px;
 
@@ -421,6 +419,15 @@
             height: 9px;
             transform: rotate(-90deg);
             transform-origin: 0 0;
+        }
+    }
+    &.s {
+        &:after {
+            top: -5px;
+            left: calc(50% - 9px / 2);
+            width: 9px;
+            height: 5px;
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
         }
     }
 
@@ -574,6 +581,8 @@
 
 
 .tooltip-title {
+    z-index: 1;
+
     .tooltip {
         &.show {
             opacity: 1;

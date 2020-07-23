@@ -14,7 +14,6 @@ import { SQUINT_RANK_COUNTRIES } from '../data/mock-geolocalization';
 	styleUrls: ['./components.component.scss']
 })
 export class ComponentsComponent implements OnInit {
-
 	public section;
 	public channel;
 	public windowSize;
@@ -26,7 +25,6 @@ export class ComponentsComponent implements OnInit {
 	public paddingForBars;
 	public showGraph = false;
 
-
 	// Geolocalization
 	public countriesActivesMap = [];
 	// Ranking countries
@@ -35,6 +33,8 @@ export class ComponentsComponent implements OnInit {
 	// Ranking
 	public rankingCities = [];
 	public topojson;
+
+  private email: string;
 
 	@ViewChild('squintWorldMap') squintWorldMap: ChartWorldMapSharedComponent;
 	

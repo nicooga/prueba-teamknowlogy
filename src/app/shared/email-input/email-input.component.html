@@ -1,0 +1,24 @@
+<div class='root'[ngClass]='{ focused: focused || hasValue() }' >
+  <div class='input-and-placeholder-wrapper'>
+    <input
+      [ngModel]='internalValue'
+      (ngModelChange)='onValueChange($event)'
+      class='input'
+      (focus)='onFocus()'
+      (blur)='onBlur()'
+      (keyup.enter)='validate()'
+    />
+
+    <div class='placeholder'>
+      {{placeholder}}
+    </div>
+
+    <div class='clear-button' *ngIf='hasValue()' (click)='clear()'>
+      <i class="icon-close"></i>
+    </div>
+  </div>
+
+  <div class='error-message' [ngClass]='{ visible: !valid }'>
+    Correo electrónico no válido
+  </div>
+</div>

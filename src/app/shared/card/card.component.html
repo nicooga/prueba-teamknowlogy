@@ -1,6 +1,6 @@
 <div class="card-generic" [ngClass]="extraClasses">
   <div *ngIf="showTitle" class="card-generic-title" [class.secondary-title]="secondaryTitle || customRightTitle">
-    <h1 *ngIf="showTooltip" [ngbTooltip]="textTooltip" tooltipClass="tooltip-title" placement="top" >{{title}}</h1>
+    <h1 *ngIf="showTooltip" [ngbTooltip]="textTooltip" tooltipClass="tooltip-title" placement="bottom" >{{title}}</h1>
     <h1 *ngIf="!showTooltip">{{title}}</h1>
     <ng-content select="[sectionExtraHeader]"></ng-content>
   </div>
