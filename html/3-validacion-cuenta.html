@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
 	xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
 	<meta charset="utf-8"> <!-- utf-8 works for most cases -->
-	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
-	<meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
-	<title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+	<meta name="viewport" content="width=device-width"> <!-- forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- use the latest (edge) version of ie rendering engine -->
+	<meta name="x-apple-disable-message-reformatting"> <!-- disable auto-scale in ios 10 mail entirely -->
+	<title></title> <!-- the title tag shows in email notifications, like android 4.4. -->
 
-	<link href="https://fonts.googleapis.com/css?family=Gothic+A1:400,600,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=gothic+a1:400,600,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
-	<!-- CSS Reset : BEGIN -->
+	<!-- css reset : begin -->
 	<style>
 		html,
 		body {
@@ -28,25 +28,25 @@
 			max-width: 400px;
 		}
 
-		/* What it does: Stops email clients resizing small text. */
+		/* what it does: stops email clients resizing small text. */
 		* {
 			-ms-text-size-adjust: 100%;
 			-webkit-text-size-adjust: 100%;
 		}
 
-		/* What it does: Centers email on Android 4.4 */
+		/* what it does: centers email on android 4.4 */
 		div[style*="margin: 16px 0"] {
 			margin: 0 !important;
 		}
 
-		/* What it does: Stops Outlook from adding extra spacing to tables. */
+		/* what it does: stops outlook from adding extra spacing to tables. */
 		table,
 		td {
 			mso-table-lspace: 0pt !important;
 			mso-table-rspace: 0pt !important;
 		}
 
-		/* What it does: Fixes webkit padding issue. */
+		/* what it does: fixes webkit padding issue. */
 		table {
 			border-spacing: 0 !important;
 			border-collapse: collapse !important;
@@ -54,65 +54,65 @@
 			margin: 0 auto !important;
 		}
 
-		/* What it does: Uses a better rendering method when resizing images in IE. */
+		/* what it does: uses a better rendering method when resizing images in ie. */
 		img {
 			-ms-interpolation-mode: bicubic;
 		}
 
-		/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+		/* what it does: prevents windows 10 mail from underlining links despite inline css. styles for underlined links should be inline. */
 		a {
 			text-decoration: none;
 		}
 
-		/* What it does: A work-around for email clients meddling in triggered links. */
+		/* what it does: a work-around for email clients meddling in triggered links. */
 		*[x-apple-data-detectors],
-		/* iOS */
+		/* ios */
 		.unstyle-auto-detected-links *,
-		.aBn {
+		.abn {
 			border-bottom: 0 !important;
 			cursor: default !important;
 			color: inherit !important;
 			text-decoration: none !important;
 			font-size: inherit !important;
-			font-family: 'Gothic A1', sans-serif !important;
+			font-family: 'gothic a1', sans-serif !important;
 			font-weight: inherit !important;
 			line-height: inherit !important;
 		}
 
-		/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
-		.a6S {
+		/* what it does: prevents gmail from displaying a download button on large, non-linked images. */
+		.a6s {
 			display: none !important;
 			opacity: 0.01 !important;
 		}
 
-		/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+		/* what it does: prevents gmail from changing the text color in conversation threads. */
 		.im {
 			color: inherit !important;
 		}
 
-		/* If the above doesn't work, add a .g-img class to any image in question. */
+		/* if the above doesn't work, add a .g-img class to any image in question. */
 		img.g-img+div {
 			display: none !important;
 		}
 
-		/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-		/* Create one of these media queries for each additional viewport size you'd like to fix */
+		/* what it does: removes right gutter in gmail ios app: https://github.com/tedgoas/cerberus/issues/89  */
+		/* create one of these media queries for each additional viewport size you'd like to fix */
 
-		/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+		/* iphone 4, 4s, 5, 5s, 5c, and 5se */
 		@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
 			u~div .email-container {
 				min-width: 320px !important;
 			}
 		}
 
-		/* iPhone 6, 6S, 7, 8, and X */
+		/* iphone 6, 6s, 7, 8, and x */
 		@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
 			u~div .email-container {
 				min-width: 375px !important;
 			}
 		}
 
-		/* iPhone 6+, 7+, and 8+ */
+		/* iphone 6+, 7+, and 8+ */
 		@media only screen and (min-device-width: 414px) {
 			u~div .email-container {
 				min-width: 414px !important;
@@ -120,9 +120,9 @@
 		}
 	</style>
 
-	<!-- CSS Reset : END -->
+	<!-- css reset : end -->
 
-	<!-- Progressive Enhancements : BEGIN -->
+	<!-- progressive enhancements : begin -->
 	<style>
 		.dot-divider{
 			position: relative;
@@ -135,7 +135,7 @@
 			position: absolute;
 			right: -10px;
     	top: 8px;
-			background: #9B9B9B;
+			background: #9b9b9b;
 		}
 		.email-container {
 			background-color: white;
@@ -151,16 +151,16 @@
 			padding-bottom: 70px;
 		}
 
-		/*BUTTON*/
+		/*button*/
 		.btn {
 			background: #000000;
 			border-radius: 2px;
 			font-size: 12px;
-			color: #FFFFFF;
+			color: #ffffff;
 			letter-spacing: 0;
 			text-align: center;
 			line-height: 12.8px;
-			font-family: 'Gothic A1', sans-serif;
+			font-family: 'gothic a1', sans-serif;
 			padding: 10px 20px;
 		}
 
@@ -170,24 +170,24 @@
 		h4,
 		h5,
 		h6 {
-			font-family: 'Gothic A1', sans-serif;
+			font-family: 'gothic a1', sans-serif;
 			color: #000000;
 			margin-top: 0;
 			font-weight: 400;
 		}
 
 		body {
-			font-family: 'Gothic A1', sans-serif;
+			font-family: 'gothic a1', sans-serif;
 			font-weight: 400;
 			font-size: 15px;
 			line-height: 1.8;
 			color: rgba(0, 0, 0, .4);
 		}
 
-		/*HEADING SECTION*/
+		/*heading section*/
 		.heading-section p {
 			font-size: 12px;
-			color: #3B3B3B;
+			color: #3b3b3b;
 			letter-spacing: 0.12px;
 			line-height: 18px;
 			margin: 0px;
@@ -205,7 +205,7 @@
 
 		}
 
-		/*INFO*/
+		/*info*/
 		.text-services h3 {
 			font-size: 15px;
 			color: #000000;
@@ -213,19 +213,19 @@
 			line-height: 1;
 			margin-bottom: 5px;
 			font-weight: 600;
-			font-family: 'Gothic A1', sans-serif;
+			font-family: 'gothic a1', sans-serif;
 		}
 
 		.text-services p {
 			font-size: 12px;
-			color: #3B3B3B;
+			color: #3b3b3b;
 			letter-spacing: 0.14px;
 			line-height: 18px;
 			margin: 0px;
-			font-family: 'Gothic A1', sans-serif;
+			font-family: 'gothic a1', sans-serif;
 		}
 
-		/*FOOTER*/
+		/*footer*/
 
 		.footer {
 			background-color: rgb(255, 255, 255);
@@ -260,11 +260,11 @@
 <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #ffffff;">
 	<center style="width: 100%; background-color: #ffffff;">
 		<div
-			style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: 'Gothic A1', sans-serif;">
+			style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: 'gothic a1', sans-serif;">
 			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
 		</div>
 		<div style="max-width: 600px; margin: 0 auto;" class="email-container">
-			<!-- BEGIN BODY -->
+			<!-- begin body -->
 			<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
 				style="margin: auto;">
 				<tr>
@@ -286,20 +286,20 @@
 				<tr>
 					<td class="bg_white email-section">
 						<div class="heading-section max-width-container" style="text-align: left; ">
-							<h2>Valida tu registro</h2>
-							<p>Activa tu perfil para que realices tu primer login. <br>
-									Comprueba tu correo electrónico.
+							<h2>valida tu registro</h2>
+							<p>activa tu perfil para que realices tu primer login. <br>
+									comprueba tu correo electrónico.
 							</p>
 						</div>
 						<div class="max-width-container">
-							<a href="#" class="btn">Inicia sesión</a>
+							<a href="#" class="btn">inicia sesión</a>
 							<p
-								style="font-size: 12px;color: #000000;text-align: left;font-family: 'Gothic A1', sans-serif;margin-top: 40px;">
-								Gracias por utilizar nuestra app.</p>
+								style="font-size: 12px;color: #000000;text-align: left;font-family: 'gothic a1', sans-serif;margin-top: 40px;">
+								gracias por utilizar nuestra app.</p>
 						</div>
 					</td>
 				</tr><!-- end: tr -->
-				<!-- 1 Column Text + Button : END -->
+				<!-- 1 column text + button : end -->
 			</table>
 			<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
 				style="margin: auto;">
@@ -319,7 +319,7 @@
 														style="margin: 0px 5px;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;float: left;">
 														<a href="#">
 															<div
-																style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
+																style="border: 1px solid #9b9b9b;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
 																<img style="height:10px;margin-bottom: 2px;" src="images/facebook.svg" alt="">
 															</div>
 														</a>
@@ -328,7 +328,7 @@
 														style="margin: 0px 5px;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;float: left;">
 														<a href="#">
 															<div
-																style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
+																style="border: 1px solid #9b9b9b;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
 																<img style="height:10px;margin-bottom: 2px;" src="images/twitter.svg" alt="">
 															</div>
 														</a>
@@ -337,7 +337,7 @@
 														style="margin: 0px 5px;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;float: left;">
 														<a href="#">
 															<div
-																style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
+																style="border: 1px solid #9b9b9b;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
 																<i class="zmdi zmdi-linkedin" style="font-size:11px;color:black;position: relative;top: -3px;left: 1px;"></i>
 															</div>
 														</a>
@@ -346,7 +346,7 @@
 														style="margin: 0px 5px;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;float: left;">
 														<a href="#">
 															<div
-																style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
+																style="border: 1px solid #9b9b9b;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
 																<i class="zmdi zmdi-google" style="font-size:11px;color:black;position: relative;top: -3px;left: 1px;"></i>
 															</div>
 														</a>
@@ -355,7 +355,7 @@
 														style="margin: 0px 5px;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;float: left;">
 														<a href="#">
 															<div
-																style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
+																style="border: 1px solid #9b9b9b;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
 																<img style="height:10px;margin-bottom: 2px;" src="images/youtube.svg" alt="">
 															</div>
 														</a>
@@ -364,38 +364,38 @@
 												<div style="width: 290px;margin: auto;margin-bottom: 30px;height: 13px;">
 													<div class="dot-divider" style="margin: 0px 9px;float: left;margin-left: 0px;line-height: 1;">
 														<a href="#">
-															<span style="font-size: 11px;color: #9B9B9B;letter-spacing: 0.09px;">
-																¿Quiénes somos?
+															<span style="font-size: 11px;color: #9b9b9b;letter-spacing: 0.09px;">
+																¿quiénes somos?
 															</span>
 														</a>
 													</div>
 													<div class="dot-divider" style="margin: 0px 9px;float: left;line-height: 1;">
 														<a href="#">
-															<span style="font-size: 11px;color: #9B9B9B;letter-spacing: 0.09px;">
-																Contacto
+															<span style="font-size: 11px;color: #9b9b9b;letter-spacing: 0.09px;">
+																contacto
 															</span>
 														</a>
 													</div>
 													<div class="dot-divider" style="margin: 0px 9px;float: left;line-height: 1;">
 														<a href="#">
-															<span style="font-size: 11px;color: #9B9B9B;letter-spacing: 0.09px;">
-																Precios
+															<span style="font-size: 11px;color: #9b9b9b;letter-spacing: 0.09px;">
+																precios
 															</span>
 														</a>
 													</div>
 													<div style="margin: 0px 9px;float: left;;margin-right: 0px;line-height: 1;">
 														<a href="#">
-															<span style="font-size: 11px;color: #9B9B9B;letter-spacing: 0.09px;">
-																Blog
+															<span style="font-size: 11px;color: #9b9b9b;letter-spacing: 0.09px;">
+																blog
 															</span>
 														</a>
 													</div>
 												</div>
-												<div style="font-size: 11px;color: #9B9B9B;text-align: center;line-height: 16px;">
-													Si no quieres recibir notificaciones, puedes<a href="#"
+												<div style="font-size: 11px;color: #9b9b9b;text-align: center;line-height: 16px;">
+													si no quieres recibir notificaciones, puedes<a href="#"
 														style="font-size: 11px;color: rgba(0,0,0,0.7);text-align: center;line-height: 13px;font-weight: bold"> desuscribirte  </a> aquí.
 													<br>
-													®Apps. 1111 W El Camino Real Mountain View CA
+													®apps. 1111 w el camino real mountain view ca
 												</div>
 												</p>
 											</td>

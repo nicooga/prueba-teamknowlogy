@@ -1,0 +1,7 @@
+<form (ngSubmit)='onSubmit()' novalidate>
+  <sq-email-input name='email' [(value)]='email'></sq-email-input>
+
+  <button type='submit' [disabled]='!email'>
+    Validar Cuenta
+  </button>
+</form>

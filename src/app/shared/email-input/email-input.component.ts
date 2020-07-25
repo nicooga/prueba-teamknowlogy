@@ -50,18 +50,21 @@ export class EmailInputComponent implements OnInit {
   }
 
   validate() {
-    this.valid = true;
-
     if (!this.hasValue()) {
+      this.valid = true;
+      this.valueChange.emit(null);
       return;
     }
 
-    if (!EMAIL_VALIDATION_REGEX.test(this.internalValue)) {
-      this.valid = false;
-      this.valueChange.emit(null);
+    if (EMAIL_VALIDATION_REGEX.test(this.internalValue)) {
+      this.valid = true;
+      this.valueChange.emit(this.internalValue);
       return
     }
 
-    this.valueChange.emit(this.internalValue);
+    this.valid = false;
+    this.valueChange.emit(null);
+
+    return false;
   }
 }

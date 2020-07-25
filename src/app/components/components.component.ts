@@ -34,8 +34,6 @@ export class ComponentsComponent implements OnInit {
 	public rankingCities = [];
 	public topojson;
 
-  private email: string;
-
 	@ViewChild('squintWorldMap') squintWorldMap: ChartWorldMapSharedComponent;
 	
 	constructor(

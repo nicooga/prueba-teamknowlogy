@@ -14,6 +14,7 @@ import { GraphBarStackedSharedComponent } from './graph-bar-stacked/graph-bar-st
 import { FormsModule } from '@angular/forms';
 import { GraphVerticalIndividualSharedComponent } from './graph-vertical-individual/graph-vertical-individual.component';
 import { EmailInputComponent } from './email-input/email-input.component';
+import { AccountValidationFormComponent } from './account-validation-form/account-validation-form.component';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { SanitizePipe } from '../pipes/sanitize-pipe/sanitize.pipe';
 import { PaymentMethodPipe } from '../pipes/payment-method-pipe/payment-method.pipe';
@@ -46,7 +47,8 @@ import { PaymentMethodPipe } from '../pipes/payment-method-pipe/payment-method.p
 		GraphBarStackedSharedComponent,
 		GraphVerticalIndividualSharedComponent,
 		PaymentMethodPipe,
-    EmailInputComponent
+    EmailInputComponent,
+    AccountValidationFormComponent
 	],
 	exports: [
 		CardSharedComponent,
@@ -59,7 +61,8 @@ import { PaymentMethodPipe } from '../pipes/payment-method-pipe/payment-method.p
 		GraphBarStackedSharedComponent,
 		GraphVerticalIndividualSharedComponent,
 		PaymentMethodPipe,
-    EmailInputComponent
+    EmailInputComponent,
+    AccountValidationFormComponent
 	],
 	providers: [
 		NumberSuffixesSharedPipe,
