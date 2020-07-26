@@ -6,6 +6,6 @@ export class AccountValidationService {
   constructor(private http: HttpClient) { }
 
   validateAccount(email: string) {
-    return this.http.post('http://localhost:3000/send-account-validation-email', { email })
+    return this.http.post('http://localhost:3000/send-account-validation-email', { email }).subscribe()
   }
 }

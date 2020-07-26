@@ -17,8 +17,6 @@ export class AccountValidationFormComponent implements OnInit {
 
   onSubmit() {
     if (!this.email || !this.email.trim()) { return; }
-    this.accountValidationService
-      .validateAccount(this.email)
-      .subscribe(data => console.log(data))
+    this.accountValidationService.validateAccount(this.email)
   }
 }

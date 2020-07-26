@@ -1,5 +1,49 @@
-table
-  tbody
-    tr
-      td
-        img.logo(src=base64ImageUrl('logo.png'))
+head
+  link(href="https://fonts.googleapis.com/css?family=Gothic+A1:400,600,700&amp;display=swap" rel="stylesheet")
+
+body
+  .root
+    .table
+      .logo-wrapper
+        h1.logo-h1: img.logo(src=assetUrl('logo.png'))
+
+      .separator
+
+      .container-wrapper
+        .container.main-container
+          .heading
+            h2 Valida tu registro
+
+          p
+            | Activa tu perfil para que realices tu primer login.
+            br
+            | Comprueba tu correo electrónico.
+
+          div: a.btn(href='#') Inicia sesión
+
+          p Gracias por utilizar nuestra app.
+
+      .separator
+
+      .container-wrapper
+        .container.footer
+          .social-networks
+            .social-network: img(src=assetUrl('facebook.svg'))
+            .social-network: img(src=assetUrl('twitter.svg'))
+            .social-network: img(src=assetUrl('linkedin.svg'))
+            .social-network: img(src=assetUrl('google.svg'))
+            .social-network: img(src=assetUrl('youtube.svg'))
+
+          .links
+            .link ¿Quiénes somos?
+            .link-separator
+            .link Contacto
+            .link-separator
+            .link Precios
+            .link-separator
+            .link Blog
+
+          .unsubscribe
+            | Si no quieres recibir notificaciones, puedes <a>desuscribirte</a> aquí.
+            br
+            | ®Apps. 1111 W El Camino Real Mountain View CA

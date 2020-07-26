@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer')
 
-const DEFAULT_SENDER = 'text@example.com'
+const DEFAULT_SENDER = process.env.MAILER_DEFAULT_SENDER || 'text@example.com'
 
 let transport
 
@@ -34,14 +34,12 @@ const createTransport = async _ => {
     MAILER_SMTP_HOST: host,
     MAILER_SMTP_PORT: port,
     MAILER_SMTP_USER: user,
-    MAILER_SMTP_PASSWORD: pass,
+    MAILER_SMTP_PASS: pass,
   } = process.env
 
   if (host && port && user && pass) {
     return nodemailer.createTransport({
-      host,
-      port,
-      secure: false,
+      service: 'Gmail',
       auth: { user, pass },
     })
   }
@@ -57,7 +55,7 @@ const getTransport = async _ => {
 const sendMail = async options => {
   const transport = await getTransport()
 
-  return await transport.sendMail({
+    return await transport.sendMail({
     from: DEFAULT_SENDER,
     ...options
   })
